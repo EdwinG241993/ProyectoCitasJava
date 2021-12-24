@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Edwin
@@ -13,6 +15,8 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
     /**
      * Creates new form ConsPacIntFrm
      */
+    private DefaultTableModel tabla;
+
     public ConsPacIntFrm() {
         initComponents();
     }
@@ -26,35 +30,35 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        IdentificacionOpt = new javax.swing.JRadioButton();
+        NombresOpt = new javax.swing.JRadioButton();
+        ApellidosOpt = new javax.swing.JRadioButton();
+        SexoOpt = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ValorTxt = new javax.swing.JTextField();
+        AceptarBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        ResultadosTbl = new javax.swing.JTable();
 
         setTitle("Consulta de Pacientes");
         setName("ConsPacIntFrm"); // NOI18N
 
-        jRadioButton1.setText("Identificación");
+        IdentificacionOpt.setText("Identificación");
 
-        jRadioButton2.setText("Nombres");
+        NombresOpt.setText("Nombres");
 
-        jRadioButton3.setText("Apellidos");
+        ApellidosOpt.setText("Apellidos");
 
-        jRadioButton4.setText("Sexo");
+        SexoOpt.setText("Sexo");
 
         jLabel1.setText("Valor a buscar");
 
-        jTextField1.setName("ValorTxt"); // NOI18N
+        ValorTxt.setName("ValorTxt"); // NOI18N
 
-        jButton1.setText("Aceptar");
-        jButton1.setName("AceptarBtn"); // NOI18N
+        AceptarBtn.setText("Aceptar");
+        AceptarBtn.setName("AceptarBtn"); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        ResultadosTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -65,8 +69,8 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setName("ResultadosTbl"); // NOI18N
-        jScrollPane1.setViewportView(jTable1);
+        ResultadosTbl.setName("ResultadosTbl"); // NOI18N
+        jScrollPane1.setViewportView(ResultadosTbl);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,19 +82,19 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
+                                .addComponent(IdentificacionOpt)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton2)
+                                .addComponent(NombresOpt)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton3)
+                                .addComponent(ApellidosOpt)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton4))
+                                .addComponent(SexoOpt))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ValorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1)))
+                                .addComponent(AceptarBtn)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -102,15 +106,15 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2))
+                    .addComponent(IdentificacionOpt)
+                    .addComponent(SexoOpt)
+                    .addComponent(ApellidosOpt)
+                    .addComponent(NombresOpt))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(ValorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AceptarBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -121,14 +125,18 @@ public class ConsPacIntFrm extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton AceptarBtn;
+    public javax.swing.JRadioButton ApellidosOpt;
+    public javax.swing.JRadioButton IdentificacionOpt;
+    public javax.swing.JRadioButton NombresOpt;
+    public javax.swing.JTable ResultadosTbl;
+    public javax.swing.JRadioButton SexoOpt;
+    public javax.swing.JTextField ValorTxt;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public DefaultTableModel getTableModel() {
+        return tabla;
+    }
 }
