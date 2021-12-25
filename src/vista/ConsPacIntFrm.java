@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package vista;
 
 import javax.swing.table.DefaultTableModel;
@@ -11,14 +7,17 @@ import javax.swing.table.DefaultTableModel;
  * @author Edwin
  */
 public class ConsPacIntFrm extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form ConsPacIntFrm
-     */
+    
+    private controlador.GestorPacienteControl gesPacControl;
     private DefaultTableModel tabla;
-
+    
     public ConsPacIntFrm() {
         initComponents();
+        gesPacControl = new controlador.GestorPacienteControl(this);
+        String titTabla[] = {"Identificacion", "Nombres", "Apellidos", "Fecha Nac", "Sexo"};
+        tabla = new DefaultTableModel(null, titTabla);
+        ResultadosTbl.setModel(tabla);
+        AceptarBtn.addActionListener(gesPacControl);
     }
 
     /**
