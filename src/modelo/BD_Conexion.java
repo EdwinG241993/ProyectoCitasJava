@@ -15,7 +15,7 @@ public class BD_Conexion {
     public Connection conectar() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexBD = DriverManager.getConnection("jdbc:mysql://localhost/citas", "root", "12345");
+            conexBD = DriverManager.getConnection("jdbc:mysql://localhost/citas", "root", "");
         } catch (Exception e) {
             System.out.print("Error de conexion" + e.getMessage());
         }
